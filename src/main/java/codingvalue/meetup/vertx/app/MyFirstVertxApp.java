@@ -1,5 +1,6 @@
 package codingvalue.meetup.vertx.app;
 
+import codingvalue.meetup.vertx.verticles.MyFirstVerticle;
 import io.vertx.core.Vertx;
 
 /**
@@ -16,6 +17,12 @@ public class MyFirstVertxApp {
          * These threads are not daemon threads, so they prevent the JVM from shutting down,
          * even if the main thread creating the Vertx instance terminates. */
         Vertx vertx = Vertx.vertx();
+
+        /** Once you have created a verticle you need to deploy it to the Vertx instance.
+         *  You deploy a verticle using one of the deployVerticle() methods on the Vertx instance.*/
+        vertx.deployVerticle(new MyFirstVerticle());
+
+
     }
 
 }
