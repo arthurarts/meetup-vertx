@@ -12,7 +12,7 @@ public class Example1 {
     }
 
     /**
-     * Asynchronous, everything happens in the same thread.
+     * Asynchronous, but everything happens in the same thread.
      */
     private static void add(int i, int j, Handler<Integer> handler) {
         int result = i + j;
