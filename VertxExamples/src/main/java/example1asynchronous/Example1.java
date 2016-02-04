@@ -15,7 +15,7 @@ public class Example1 {
      * Asynchronous, but everything happens in the same thread.
      */
     private static void add(int i, int j, Handler<Integer> handler) {
-        int result = i + j;
+        int result = i + j; // Bring on the workload :-)
         handler.handle(result);
     }
 

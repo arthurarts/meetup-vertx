@@ -14,7 +14,8 @@ public class Example2 {
         Vertx vertx = Vertx.vertx();
         vertx.deployVerticle(new Consumer("1"));
         vertx.deployVerticle(new Consumer("2"));
-        vertx.deployVerticle(new Producer());
+
+        vertx.setTimer(1000, aLong -> vertx.deployVerticle(new Producer()));
 
     }
 
